@@ -1,0 +1,39 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Tests Suite">
+    <test  name="D:\AUTO_APPLICATION\ApiReqresProject\src\test" preserve-order="true" parallel="none">
+        <classes>
+            <class name="Login.LoginTests">
+                <methods>
+                    <include name="ValidLoginTest"/>
+                    <include name="InValidLoginTest"/>
+                </methods>
+            </class>
+            <class name="Register.RegisterTests">
+                <methods>
+                    <include name="SuccessfulRegisterTest"/>
+                    <include name="UnSuccessfulRegisterTest"/>
+                </methods>
+            </class>
+            <class name="Users.UserTests">
+                <methods>
+                    <include name="CreateUser"/>
+                    <include name="PutUpdateUser"/>
+                    <include name="PatchRequestUser"/>
+                    <include name="GetSingleUser"/>
+                    <include name="GetListUsers"/>
+                    <include name="GetNotFoundSingleUser"/>
+                    <include name="DelayResponse"/>
+                    <include name="DeleteUser"/>
+                </methods>
+            </class>
+            <class name="Resources.ResourceTest">
+                <methods>
+                    <include name="SingleResourceTest"/>
+                    <include name="ListResourceTest"/>
+                    <include name="NotFoundSingleResourceTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
